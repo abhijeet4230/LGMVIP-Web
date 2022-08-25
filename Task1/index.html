@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html ng-app="todoApp">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+  <script src="https://kit.fontawesome.com/a99fbd660b.js" crossorigin="anonymous"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Caveat Brush' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>Todo List</header>
+
+  <div ng-controller="todoList" class="appBody">
+
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;
+      </span>
+      click item to edit content
+    </div>
+
+    <div><input id="title" type="text" placeholder="Title" />
+    </div>
+
+    <i class="fa-solid fa-angle-down" ng-click="showItem=true" ng-show="!showItem">
+    </i>
+    <i class="fa-solid fa-angle-up" ng-click="showItem=false" ng-show="showItem">
+    </i>
+
+    <span>{{todos.length}} Items</span>
+
+    <ul ng-show="!showItem">
+      <li ng-repeat="todo in todos">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="todo.done">
+          <span class="done-{{todo.done}}" contentEditable="true">
+            {{todo.text}}
+          </span>
+          <i class="fa fa-trash-o" ng-click="deleteItem(todo)" *ngFor="let todo of todos">
+          </i>
+        </label>
+      </li>
+    </ul>
+
+    <form ng-submit="addTodo()">
+
+      <input type="text" ng-model="todoText" placeholder="add new todo here">
+      <button type="submit" value="add">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+      </input>
+
+    </form>
+
+  </div>
+
+  <footer>by Abhijeet Kumar</footer>
+  <script src="main.js"></script>
+</body>
+
+</html>

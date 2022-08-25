@@ -1,0 +1,78 @@
+body{
+    background-image:url('https://media.istockphoto.com/photos/office-table-top-view-picture-id1205881259?k=20&m=1205881259&s=170667a&w=0&h=-xV7oBnEVh6lN4b6oYiE3FSEocs-K-TdWNTGyuR_QgU=');
+background-size:100% auto;
+background-repeat: no-repeat;
+background-color:#FBC02D;
+}
+
+header{
+font-family: 'Caveat Brush';
+font-size:40px;
+}
+
+.appBody{
+background-color:white;
+opacity:0.9;
+margin:100px auto;
+padding:80px;
+position: relative;
+}
+
+.alert {
+color: blue;
+font-size:17px;
+font-family: 'Caveat Brush';
+position: absolute;
+top: 8px;
+right: 16px;
+}
+.closebtn {
+margin-left: 15px;
+color: blue;
+font-weight: bold;
+float: right;
+font-size: 22px;
+line-height: 20px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+#title{
+font-size:20px;
+}
+
+input{
+margin-left:-35px;
+padding-bottom:15px;
+}
+input[type='text']{
+outline:none;
+border:none;
+} 
+
+ul li{
+list-style:none;
+}
+
+.fa-trash-o{
+margin-left:10px  
+}
+
+button{
+background-color:transparent;
+border:none;
+font-size:18px;
+margin-left:-35px;
+}
+
+.done-true {
+text-decoration: line-through;
+color: grey;
+}
+
+footer{
+bottom:0px;
+position:fixed;
+font-family:"sofia";
+font-size:10px;
+}
